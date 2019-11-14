@@ -122,7 +122,7 @@ items:
           - --listen-metrics=:3031
           - --sync-garbage-collection
           - --manifest-generation=true
-          image: fluxcd/flux:1.14.2
+          image: chanwit/flux:1.14.2-docker
           imagePullPolicy: IfNotPresent
           name: flux
           ports:
