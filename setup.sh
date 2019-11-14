@@ -159,7 +159,7 @@ wksctl init --git-url="$(git_http_url "$(git_remote_fetchurl "${git_remote}")")"
 log "Pushing initial cluster configuration"
 git add config.yaml footloose.yaml machines.yaml flux.yaml wks-controller.yaml
 
-git diff-index --quiet HEAD || git commit -m "Initial cluster configuration"
+git diff-index --quiet HEAD || git commit -m "Initial cluster configuration" || true
 git push "${git_remote}" HEAD || true
 
 log "Installing Kubernetes cluster"
