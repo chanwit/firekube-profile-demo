@@ -1,0 +1,4 @@
+version: 1
+commandUpdated:
+  generators:
+    - command: find $PWD -name "docker-compose.yaml" | awk -F/ '{print $(NF-1)}' | xargs -I{} docker stack deploy --orchestrator=kubernetes -c $PWD/{}/docker-compose.yaml {}
