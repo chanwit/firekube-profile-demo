@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+  name: compose-stack-edit
+rules:
+- apiGroups:
+  - compose.docker.com
+  resources:
+  - stacks
+  - stacks/scale
+  - stacks/log
+  - stacks/composeFile
+  verbs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - patch
+  - update
+  - watch

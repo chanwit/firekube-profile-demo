@@ -1,0 +1,80 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    com.docker.default-service-type: ""
+    com.docker.deploy-namespace: docker
+    com.docker.fry: compose
+    com.docker.image-tag: latest
+  name: compose-service
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - users
+  - groups
+  - serviceaccounts
+  verbs:
+  - impersonate
+- apiGroups:
+  - authentication.k8s.io
+  resources:
+  - '*'
+  verbs:
+  - impersonate
+- apiGroups:
+  - ""
+  - apps
+  resources:
+  - services
+  - deployments
+  - statefulsets
+  - daemonsets
+  verbs:
+  - get
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - pods/log
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - compose.docker.com
+  resources:
+  - stacks
+  verbs:
+  - '*'
+- apiGroups:
+  - compose.docker.com
+  resources:
+  - stacks/owner
+  verbs:
+  - get
+- apiGroups:
+  - admissionregistration.k8s.io
+  resources:
+  - validatingwebhookconfigurations
+  - mutatingwebhookconfigurations
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - apiregistration.k8s.io
+  resourceNames:
+  - v1beta1.compose.docker.com
+  - v1beta2.compose.docker.com
+  - v1alpha3.compose.docker.com
+  resources:
+  - apiservices
+  verbs:
+  - '*'
+- apiGroups:
+  - apiregistration.k8s.io
+  resources:
+  - apiservices
+  verbs:
+  - create

@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  labels:
+    com.docker.default-service-type: ""
+    com.docker.deploy-namespace: docker
+    com.docker.fry: compose
+    com.docker.image-tag: latest
+  name: compose
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: compose-service
+subjects:
+- kind: ServiceAccount
+  name: compose
+  namespace: docker
