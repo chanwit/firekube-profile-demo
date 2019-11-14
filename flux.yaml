@@ -116,6 +116,7 @@ items:
           - --git-path=base/
           - --git-path=profiles/
           - --git-path=compose/
+          - --git-path=.
           - --git-readonly
           - --memcached-hostname=memcached.weavek8sops.svc.cluster.local
           - --memcached-service=memcached
