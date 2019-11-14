@@ -113,10 +113,10 @@ items:
           - --git-url=https://github.com/chanwit/firekube-profile-demo
           - --git-branch=master
           - --git-poll-interval=30s
-          - --git-path=base/
-          - --git-path=profiles/
-          - --git-path=componse/
-          - --git-path=system/
+          - --git-path=.
+          - --git-path=.
+          - --git-path=.
+          - --git-path=.
           - --git-readonly
           - --memcached-hostname=memcached.weavek8sops.svc.cluster.local
           - --memcached-service=memcached
