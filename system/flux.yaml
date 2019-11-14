@@ -115,7 +115,7 @@ items:
           - --git-poll-interval=30s
           - --git-path=base/
           - --git-path=profiles/
-          - --git-path=componse/
+          - --git-path=compose/
           - --git-path=system/
           - --git-readonly
           - --memcached-hostname=memcached.weavek8sops.svc.cluster.local
