@@ -22,7 +22,7 @@ items:
   kind: Machine
   metadata:
     labels:
-      set: worker
+      set: master
     name: worker-0
     namespace: weavek8sops
   spec:
@@ -40,7 +40,7 @@ items:
   kind: Machine
   metadata:
     labels:
-      set: worker
+      set: master
     name: worker-1
     namespace: weavek8sops
   spec:
@@ -58,7 +58,7 @@ items:
   kind: Machine
   metadata:
     labels:
-      set: worker
+      set: master
     name: worker-2
     namespace: weavek8sops
   spec:
