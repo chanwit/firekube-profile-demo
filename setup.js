@@ -40,7 +40,7 @@ const footloose = config => ({
       name: 'node%d',
       backend: config.backend,
       ignite: {
-        cpus: 2,
+        cpus: 4,
         memory: '2GB',
         diskSize: '5GB',
         kernel: 'weaveworks/ignite-kernel:4.19.47',
