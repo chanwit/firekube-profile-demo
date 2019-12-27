@@ -58,7 +58,7 @@ items:
   kind: Machine
   metadata:
     labels:
-      set: master
+      set: worker
     name: worker-2
     namespace: weavek8sops
   spec:
