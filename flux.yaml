@@ -132,6 +132,9 @@ items:
           - mountPath: /var/fluxd/keygen
             name: git-keygen
         serviceAccount: flux
+        nodeSelector:
+          node-role.kubernetes.io/master: ""
+          kubernetes.io/hostname: "node0"
         tolerations:
         - effect: NoSchedule
           key: node-role.kubernetes.io/master
