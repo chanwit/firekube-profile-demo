@@ -7,9 +7,9 @@ machines:
     backend: ignite
     ignite:
       cpus: 4
-      diskSize: 5GB
+      diskSize: 20GB
       kernel: weaveworks/ignite-kernel:4.19.47
-      memory: 2GB
+      memory: 12GB
     image: weaveworks/ignite-centos:latest
     name: node%d
     portMappings:

@@ -13,7 +13,7 @@ items:
         apiVersion: baremetalproviderspec/v1alpha1
         kind: BareMetalMachineProviderSpec
         private:
-          address: 10.61.0.39
+          address: 10.61.0.43
           port: 22
         public:
           address: 127.0.0.1
@@ -31,7 +31,7 @@ items:
         apiVersion: baremetalproviderspec/v1alpha1
         kind: BareMetalMachineProviderSpec
         private:
-          address: 10.61.0.40
+          address: 10.61.0.44
           port: 22
         public:
           address: 127.0.0.1
@@ -49,7 +49,7 @@ items:
         apiVersion: baremetalproviderspec/v1alpha1
         kind: BareMetalMachineProviderSpec
         private:
-          address: 10.61.0.41
+          address: 10.61.0.45
           port: 22
         public:
           address: 127.0.0.1
@@ -67,7 +67,7 @@ items:
         apiVersion: baremetalproviderspec/v1alpha1
         kind: BareMetalMachineProviderSpec
         private:
-          address: 10.61.0.42
+          address: 10.61.0.46
           port: 22
         public:
           address: 127.0.0.1
